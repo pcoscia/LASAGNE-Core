@@ -57,7 +57,7 @@ namespace LTM
 #if !defined(DEFINE_DDS_TYPESUPPORT_ltm_LTMTopicDetails)
 #   define  DEFINE_DDS_TYPESUPPORT_ltm_LTMTopicDetails
     typedef ltm::LTMTopicDetails                                LTMTopicDetailsCORBAType;
-# if defined(TAF_USES_DDSCORBA)
+# if defined(TAF_USES_OPENDDS)
     typedef DEFINE_DDS_TYPESUPPORT(ltm, LTMTopicDetails)        LTMTopicDetailsDataSupport;
     typedef LTMTopicDetailsDataSupport::_data_holder_type       LTMTopicDetailsHolderType;
     typedef LTMTopicDetailsDataSupport::_data_type              LTMTopicDetailsTopicType;

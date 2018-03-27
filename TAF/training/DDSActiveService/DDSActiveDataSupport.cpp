@@ -1,8 +1,8 @@
 #define LTM_DDSACTIVEDATASUPPORT_CPP
 
-#if !defined(TAF_USES_DDSCORBA)
-
 #include "DDSActiveDataSupport.h"
+
+#if !defined(TAF_USES_OPENDDS)
 
 namespace LTM
 {

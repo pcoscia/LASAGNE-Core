@@ -1,8 +1,8 @@
 #define LTM_CORBACTIVEDATASUPPORT_CPP
 
-#if !defined(TAF_USES_DDSCORBA)
-
 #include "CORBActiveDataSupport.h"
+
+#if !defined(TAF_USES_OPENDDS)
 
 namespace LTM
 {
