@@ -64,6 +64,7 @@ before_install:
 
 branches:
   only:
+    - CI_Testing
     - develop
     - master
     - release*
