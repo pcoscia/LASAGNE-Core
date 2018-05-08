@@ -93,13 +93,7 @@ before_script:
     fi
 
 script:
-  - wget https://dl.bintray.com/jfrog/jfrog-cli-go/1.7.1/jfrog-cli-linux-amd64/jfrog
-  - chmod +x jfrog
   - cd $TAF_ROOT
   - perl $ACE_ROOT/bin/mwc.pl -type gnuace -workers 2 TAF_CI.mwc
   - make CXX=$COMPILER --jobs 6 --quiet
-  - ./jfrog rt config --url $ARTIFACTORY_URL --user $ARTIFACTORY_USER --apikey $ARTIFACTORY_PASSWORD
-  - ./jfrog rt u "multi*/*.jar" travisci-generic-local --build-name=travisci-generic-artifactory --build-number=$TRAVIS_BUILD_NUMBER --flat=false
-  - ./jfrog rt u "multi*/*.war" travisci-generic-local --build-name=travisci-generic-artifactory --build-number=$TRAVIS_BUILD_NUMBER --flat=false
-  - ./jfrog rt bce travisci-generic-artifactory $TRAVIS_BUILD_NUMBER
-  - ./jfrog rt bp travisci-generic-artifactory $TRAVIS_BUILD_NUMBER
+  - curl -u $ARTIFACTORY_USER:$ARTIFACTORY_PASSWORD -T . "http://localhost:8081/artifactory/generic-local/test/"
