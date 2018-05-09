@@ -100,5 +100,5 @@ script:
   - ls ../
   - ls ../../
   - ls
-  - curl -uadmin:AP7DJR7SS91BUiBHKN5pXtsh9X -T ./makefile "http://10.1.3.45:8081/artifactory/generic-local/"
+  - curl -uadmin:AP7DJR7SS91BUiBHKN5pXtsh9X -T ../lib/ "http://10.1.3.45:8081/artifactory/generic-local/"
   #  - ping 10.1.3.45
