@@ -96,5 +96,5 @@ script:
   - cd $TAF_ROOT
   - perl $ACE_ROOT/bin/mwc.pl -type gnuace -workers 2 TAF_CI.mwc
   #  - make CXX=$COMPILER --jobs 6 --quiet
-  - curl -u "":""  -T . "http://10.1.3.45:8081/artifactory/generic-local/test/"
+  - curl -u admin:password -T test "http://10.1.3.45:8081/artifactory/generic-local/testset"
   #  - ping 10.1.3.45
