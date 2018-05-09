@@ -95,6 +95,7 @@ before_script:
 script:
   - cd $TAF_ROOT
   - perl $ACE_ROOT/bin/mwc.pl -type gnuace -workers 2 TAF_CI.mwc
+  - ls
   #  - make CXX=$COMPILER --jobs 6 --quiet
-  - curl -uadmin:AP7DJR7SS91BUiBHKN5pXtsh9X -T ./test/ "http://10.1.3.45:8081/artifactory/generic-local/"
+  - curl -uadmin:AP7DJR7SS91BUiBHKN5pXtsh9X -T / "http://10.1.3.45:8081/artifactory/generic-local/"
   #  - ping 10.1.3.45
