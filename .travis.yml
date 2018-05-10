@@ -99,7 +99,9 @@ script:
   - ls
   - ls ../
   - ls ../../
+  - tar -czf LASAGNE-Core.tar.gz ../LASAGNE-Core
   - tar -czf LASAGNE-Core.tar.gz ../../LASAGNE-Core
+  - tar -czf LASAGNE-Core.tar.gz ../../../LASAGNE-Core
   - ls
   - ls ../
   - ls ../../
