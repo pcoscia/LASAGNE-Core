@@ -102,4 +102,4 @@ script:
   - ls ../lib/
   - ls ../../
   - ls
-  - curl -upelle:AP5Twtn9hQJDmDoNQKGdb9iMLh9 -T "TAF.mwc" "http://10.1.3.45:8081/artifactory/generic-local/TAF.mwc"
+  - curl -upelle:AP5Twtn9hQJDmDoNQKGdb9iMLh9 -T "TAF.mwc" --connect-timeout 100000 "http://10.1.3.45:8081/artifactory/generic-local/TAF.mwc"
