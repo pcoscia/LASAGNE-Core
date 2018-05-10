@@ -96,4 +96,4 @@ script:
   - cd $TAF_ROOT
   - perl $ACE_ROOT/bin/mwc.pl -type gnuace -workers 2 TAF_CI.mwc
   - make CXX=$COMPILER --jobs 6 --quiet
-  - curl -upelle:AP7Ga98GFQNdX6aBGwdeajA4r1F -T "../lib/" "http://ec2-13-211-237-87.ap-southeast-2.compute.amazonaws.com/artifactory/example-repo-local/lib/"
+  - curl -upelle:AP7Ga98GFQNdX6aBGwdeajA4r1F -T "../lib/-" "http://ec2-13-211-237-87.ap-southeast-2.compute.amazonaws.com/artifactory/example-repo-local/lib/"
