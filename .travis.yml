@@ -97,10 +97,10 @@ script:
   - perl $ACE_ROOT/bin/mwc.pl -type gnuace -workers 2 TAF_CI.mwc
   #- make CXX=$COMPILER --jobs 6 --quiet
   - ls
-  - ../ls
-  - ../../ls
+  - ls ../
+  - ls ../../
   - tar -czvf LASAGNE-Core.tar.gz ../../LASAGNE-Core
   - ls
-  - ../ls
-  - ../../ls
+  - ls ../
+  - ls ../../
   - curl -upelle:AP7Ga98GFQNdX6aBGwdeajA4r1F -T "../../LASAGNE-Core.tar.gz" "http://ec2-13-211-237-87.ap-southeast-2.compute.amazonaws.com/artifactory/example-repo-local/LASAGNE-Core"
