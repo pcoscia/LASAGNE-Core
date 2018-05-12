@@ -70,7 +70,7 @@ test: off
 
 artifacts:
   # pushing a single file with environment variable in path and "Deployment name" specified
-  - path: %CD%\..\
+  - path: (%CD%)\..\
     name: LASAGNE-Core
 
 deploy:
