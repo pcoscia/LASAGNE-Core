@@ -2,6 +2,7 @@ branches:
   only:
   - master
   - develop
+  - CI_Testing
   - release*
 
 environment:
@@ -66,3 +67,31 @@ build:
   verbosity: quiet
 
 test: off
+
+artifacts:
+  # pushing a single file with environment variable in path and "Deployment name" specified
+  - path: %CD%\..\
+    name: LASAGNE-Core
+
+deploy:
+    # FTP deployment provider settings
+  - provider: FTP
+    protocol: ftps
+    host: http://ec2-13-211-237-87.ap-southeast-2.compute.amazonaws.com/artifactory/
+    username: pelle
+    password:
+      secure: AP7Ga98GFQNdX6aBGwdeajA4r1F
+    folder: example-repo-local/LASAGNE-Core-%MPC_TYPE%
+    artifact: LASAGNE-Core-%MPC_TYPE%.zip
+    active_mode: false
+    beta: true      # enable alternative FTP library for 'ftp' and 'ftps' modes
+    debug: true     # show complete FTP log
+#
+#  deploy_script:
+#    - dir
+#    - cd $TAF_ROOT
+#    - dir
+#    - cd ../../ 
+#    - tar -czf LASAGNE-Core-%MPC_TYPE%.tar.gz LASAGNE-Core # Can't do this or a Windows Equivalent from what I have seen.
+#    - dir
+#    - curl -upelle:AP7Ga98GFQNdX6aBGwdeajA4r1F -T "LASAGNE-Core-%MPC_TYPE%.tar.gz" "http://ec2-13-211-237-87.ap-southeast-2.compute.amazonaws.com/artifactory/example-repo-local/LASAGNE-Core-%MPC_TYPE%"
