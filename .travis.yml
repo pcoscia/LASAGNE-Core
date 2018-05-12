@@ -100,4 +100,4 @@ script:
   - cd ../../ 
   - tar -czf LASAGNE-Core-$COMPILER.tar.gz LASAGNE-Core
   - ls
-  - curl -upelle:AP7Ga98GFQNdX6aBGwdeajA4r1F -T "LASAGNE-Core-$COMPILER.tar.gz" "http://ec2-13-211-237-87.ap-southeast-2.compute.amazonaws.com/artifactory/example-repo-local/LASAGNE-Core"
+  - curl -upelle:AP7Ga98GFQNdX6aBGwdeajA4r1F -T "LASAGNE-Core-$COMPILER.tar.gz" "http://ec2-13-211-237-87.ap-southeast-2.compute.amazonaws.com/artifactory/example-repo-local/LASAGNE-Core-$COMPILER"
