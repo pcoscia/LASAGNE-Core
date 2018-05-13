@@ -70,8 +70,10 @@ test: off
 
 artifacts:
   # pushing a single file with environment variable in path and "Deployment name" specified
-  - path: (%CD%)\..\
-    name: LASAGNE-Core
+  - path: LASAGNE-Core
+  #
+  #- path: TAF_ROOT\..\
+  #  name: LASAGNE-Core
 
 deploy:
     # FTP deployment provider settings
