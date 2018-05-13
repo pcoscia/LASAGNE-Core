@@ -71,6 +71,7 @@ test: off
 artifacts:
   # pushing a single file with environment variable in path and "Deployment name" specified
   - path: /
+    name: LASAGNE-Core-%MPC_TYPE%
   #
   #- path: TAF_ROOT\..\
   #  name: LASAGNE-Core
