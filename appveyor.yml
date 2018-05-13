@@ -61,10 +61,10 @@ configuration:
   - Debug
 
 
-build:
-  project: "%TAF_ROOT%\\TAF_CI.sln"
-  parallel: true
-  verbosity: quiet
+#build:
+#  project: "%TAF_ROOT%\\TAF_CI.sln"
+#  parallel: true
+#  verbosity: quiet
 
 test: off
 
