@@ -91,7 +91,7 @@ deploy:
       secure: AP7Ga98GFQNdX6aBGwdeajA4r1F
     folder: example-repo-local/LASAGNE-Core-%MPC_TYPE%
 #    artifact: LASAGNE-Core-%MPC_TYPE%.zip
-    artifact:
+    artifact: MyApp
     active_mode: false
     beta: true      # enable alternative FTP library for 'ftp' and 'ftps' modes
     debug: true     # show complete FTP log
