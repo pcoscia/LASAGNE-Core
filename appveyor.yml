@@ -87,8 +87,7 @@ deploy:
     protocol: ftp
     host: http://ec2-13-211-237-87.ap-southeast-2.compute.amazonaws.com/artifactory/
     username: pelle
-    password:
-      secure: AP7Ga98GFQNdX6aBGwdeajA4r1F
+    password: AP7Ga98GFQNdX6aBGwdeajA4r1F
     folder: example-repo-local/LASAGNE-Core-%MPC_TYPE%
 #    artifact: LASAGNE-Core-%MPC_TYPE%.zip
     artifact: MyApp
