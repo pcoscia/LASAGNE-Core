@@ -66,11 +66,16 @@ build:
   parallel: true
   verbosity: quiet
 
+after build:
+  - 7z a myapp.zip C:\projects\lasagne-core
+
 test: off
 
 artifacts:
   # pushing a single file with environment variable in path and "Deployment name" specified
-  - path: /*
+  - path: myapp.zip
+    name: MyApp
+#  - path: /*
 #    name: LASAGNE-Core-%MPC_TYPE%
   #
   #- path: TAF_ROOT\..\
