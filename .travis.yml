@@ -70,9 +70,9 @@ branches:
     - release*
 
 install:
-  - pip install conan
-  - conan remote add artifactory http://ec2-13-211-219-105.ap-southeast-2.compute.amazonaws.com:8081/artifactory/api/conan/conan-local
-  - conan user -p APGawfvfHhndSuAE7PA1Ma9i6h -r artifactory pelle
+  - sudo pip install conan
+  - sudo conan remote add artifactory http://ec2-13-211-219-105.ap-southeast-2.compute.amazonaws.com:8081/artifactory/api/conan/conan-local
+  - sudo conan user -p APGawfvfHhndSuAE7PA1Ma9i6h -r artifactory pelle
 
 before_script:
   # Print out the compiler version (useful to track)
