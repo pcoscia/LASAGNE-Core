@@ -64,12 +64,15 @@ before_install:
 
 branches:
   only:
-    #- CI_Testing
+    - CI_Testing
     - develop
     - master
     - release*
 
 install:
+  - pip install conan
+  - conan remote add artifactory http://ec2-13-211-219-105.ap-southeast-2.compute.amazonaws.com:8081/artifactory/api/conan/conan-local
+  - conan user -p APGawfvfHhndSuAE7PA1Ma9i6h -r artifactory pelle
 
 before_script:
   # Print out the compiler version (useful to track)
@@ -101,3 +104,9 @@ script:
   - tar -czf LASAGNE-Core-$COMPILER.tar.gz LASAGNE-Core
   - ls
   - curl -upelle:AP7Ga98GFQNdX6aBGwdeajA4r1F -T "LASAGNE-Core-$COMPILER.tar.gz" "http://ec2-13-211-237-87.ap-southeast-2.compute.amazonaws.com/artifactory/example-repo-local/LASAGNE-Core-$COMPILER"
+  - conan create user/channel
+
+#  - conan remote add artifactory http://ec2-13-211-219-105.ap-southeast-2.compute.amazonaws.com:8081/artifactory/api/conan/conan-local
+#  - conan user -p APGawfvfHhndSuAE7PA1Ma9i6h -r artifactory pelle
+
+
