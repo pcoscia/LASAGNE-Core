@@ -104,7 +104,7 @@ script:
   - tar -czf LASAGNE-Core-$COMPILER.tar.gz LASAGNE-Core
   - ls
   - curl -upelle:AP7Ga98GFQNdX6aBGwdeajA4r1F -T "LASAGNE-Core-$COMPILER.tar.gz" "http://ec2-13-211-237-87.ap-southeast-2.compute.amazonaws.com/artifactory/example-repo-local/LASAGNE-Core-$COMPILER"
-  - conan create LASAGNECore/0.0.1@pelle/testing
+  - conan create . LASAGNECore/0.0.1@pelle/testing
 
 #  - conan remote add artifactory http://ec2-13-211-219-105.ap-southeast-2.compute.amazonaws.com:8081/artifactory/api/conan/conan-local
 #  - conan user -p APGawfvfHhndSuAE7PA1Ma9i6h -r artifactory pelle
