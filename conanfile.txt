@@ -1,0 +1,7 @@
+[requires]
+ACE_TAO_MPC/6.4.8@pelle/testing
+OpenDDS/3.12.2@pelle/testing
+
+[generators]
+gcc visual studio
+
